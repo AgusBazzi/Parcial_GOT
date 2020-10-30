@@ -2,6 +2,7 @@ class Conspiracion {
 	
 	const victima
 	const complotados
+	var ejecutada = false
 	
 	// ------ Punto C2 ------ //
 	
@@ -17,6 +18,13 @@ class Conspiracion {
 	
 	method serEjecutada() {
 		complotados.forEach { personaje => personaje.actuarContra(victima) }
+		ejecutada = true
+	}
+	
+	// ------ Punto C4 ------ //
+	
+	method cumpliMiObjetivo() {
+		return ejecutada &&  !victima.soyPeligroso()
 	}
 	
 }

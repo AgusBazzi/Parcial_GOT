@@ -34,7 +34,7 @@ object asesinoPrecavido {
 
 object disipado {
 	
-	var porcentajeADerrochar
+	var property porcentajeADerrochar = 20
 	
 	method actuarContra(unaVictima) {
 		unaVictima.derrocharPorcentajePatrimonio(porcentajeADerrochar)
@@ -45,7 +45,7 @@ object disipado {
 object miedoso {
 	
 	method actuarContra(unaVictima) {
-		
+		// nada
 	}
 	
 }
