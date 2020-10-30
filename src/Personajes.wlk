@@ -4,6 +4,8 @@ class Personaje {
 	const conyugues = #{}
 	
 	
+	// ------ Punto A1 ------ //
+	
 	method casa() {
 		return casa
 	}
@@ -12,5 +14,13 @@ class Personaje {
 		return conyugues.size() == 0
 	}
 	
+	// ------ Punto A2 ------ //
 	
+	method puedoCasarmeCon(otraPersona) {
+		return self.miCasaAdmiteCasamientoCon(otraPersona) && otraPersona.miCasaAdmiteCasamientoCon(self)
+	}
+	
+	method miCasaAdmiteCasamientoCon(otraPersona) {
+		return casa.admitoCasamientoEntre(self, otraPersona)
+	}
 }

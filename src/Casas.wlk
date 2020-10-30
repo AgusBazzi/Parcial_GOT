@@ -1,5 +1,7 @@
 object casaLannister {
 	
+	// ------ Punto A1 ------ //
+	
 	method admitoCasamientoEntre(unMiembro, otraPersona) {
 		return unMiembro.estoyCholito()
 	}
@@ -9,6 +11,8 @@ object casaLannister {
 
 object casaStark {
 	
+	// ------ Punto A1 ------ //
+	
 	method admitoCasamientoEntre(unMiembro, otraPersona) {
 		return otraPersona.casa() != self
 	}
@@ -17,6 +21,8 @@ object casaStark {
 
 
 object casaGuardiaDeLaNoche {
+	
+	// ------ Punto A1 ------ //
 	
 	method admitoCasamientoEntre(unMiembo, otraPersona) {
 		return false
