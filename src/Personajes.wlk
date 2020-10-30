@@ -1,8 +1,10 @@
 class Personaje {
 	
+	// ------ Atributos ------ //
+	
 	var casa
 	const conyugues = #{}
-	
+	const amigos = #{}
 	
 	// ------ Punto A1 ------ //
 	
@@ -44,5 +46,11 @@ class Personaje {
 	
 	method patrimonio() {
 		return casa.patrimonioIndividual()
+	}
+	
+	// ------ Punto B1 ------ //
+	
+	method estoySuperCholito() {
+		return amigos.size() == 0
 	}
 }
