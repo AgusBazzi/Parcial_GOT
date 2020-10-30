@@ -1,3 +1,5 @@
+import Personajes.*
+
 class Casa {
 	
 	var patrimonio
@@ -9,7 +11,7 @@ class Casa {
 	
 	// ------ Punto A4 ------ //
 	
-	method esRica() {
+	method soyRica() {
 		return patrimonio > 1000
 	}
 	

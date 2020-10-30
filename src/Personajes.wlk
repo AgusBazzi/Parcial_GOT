@@ -1,3 +1,5 @@
+import Casas.*
+
 class Personaje {
 	
 	// ------ Atributos ------ //
@@ -5,6 +7,7 @@ class Personaje {
 	var casa
 	const conyugues = #{}
 	const amigos = #{}
+	var estoyVivo
 	
 	// ------ Punto A1 ------ //
 	
@@ -59,4 +62,29 @@ class Personaje {
 	method aliados() {
 		return amigos + conyugues + casa.miembros()
 	}
+	
+	// ------ Punto B3 ------ //
+	
+	method soyPeligroso() {
+		return estoyVivo && ( self.somosAliadosRicos()   || 
+							  self.todosConyuguesRicos() || 
+							  self.tengoAliadoPeligroso() )
+	}
+	
+	method somosAliadosRicos() {
+		return self.aliados().sum { aliado => aliado.patrimonio() } > 10000
+	}
+	
+	method todosConyuguesRicos() {
+		return conyugues.all { conyugue => conyugue.soyDeCasaRica() }
+	}
+	
+	method soyDeCasaRica() {
+		return casa.soyRica()
+	}
+	
+	method tengoAliadoPeligroso() {
+		return self.aliados().any { aliado => aliado.soyPeligroso() }
+	}
+
 }
