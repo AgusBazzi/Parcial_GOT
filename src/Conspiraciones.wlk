@@ -13,4 +13,10 @@ class Conspiracion {
 		return self.traidores().size()
 	}
 	
+	// ------ Punto C3 ------ //
+	
+	method serEjecutada() {
+		complotados.forEach { personaje => personaje.actuarContra(victima) }
+	}
+	
 }

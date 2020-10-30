@@ -30,6 +30,17 @@ class Casa {
 	method miembros() {
 		return miembros
 	}
+	
+	// ------ Punto C3 ------ //
+	
+	method patrimonio() {
+		return patrimonio
+	}
+	
+	method algunMiembroVivoSoltero() {
+		return miembros.filter { miembro => miembro.estoyVivo() && miembro.estoyCholito() }.anyOne()
+	}
+	
 }
 
 object casaLannister inherits Casa {

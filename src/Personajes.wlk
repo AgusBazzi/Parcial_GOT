@@ -1,6 +1,7 @@
 import Casas.*
 import Animales.*
 import Conspiraciones.*
+import Personalidades.*
 
 class Personaje {
 	
@@ -11,6 +12,7 @@ class Personaje {
 	const amigos = #{}
 	var estoyVivo
 	var conspiracion
+	var personalidad
 	
 	// ------ Punto A1 ------ //
 	
@@ -19,7 +21,7 @@ class Personaje {
 	}
 	
 	method estoyCholito() {
-		return conyugues.size() == 0
+		return conyugues.isEmpty()
 	}
 	
 	// ------ Punto A2 ------ //
@@ -57,7 +59,7 @@ class Personaje {
 	// ------ Punto B1 ------ //
 	
 	method estoySuperCholito() {
-		return amigos.size() == 0
+		return amigos.isEmpty()
 	}
 	
 	// ------ Punto B2 ------ //
@@ -105,6 +107,20 @@ class Personaje {
 	
 	method esAliado(unPersonaje) {
 		return self.aliados().contains(unPersonaje)
+	}
+	
+	// ------ Punto C3 ------ //
+	
+	method ejecutarConspiacion() {
+		conspiracion.serEjecutada()
+	}
+	
+	method actuarContra(unaVictima) {
+		personalidad.actuarContra(unaVictima)
+	}
+	
+	method estoyVivo() {
+		return estoyVivo
 	}
 
 }
