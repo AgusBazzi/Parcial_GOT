@@ -41,6 +41,10 @@ class Casa {
 		return miembros.filter { miembro => miembro.estoyVivo() && miembro.estoyCholito() }.anyOne()
 	}
 	
+	method perderPorcentajePatrimonio(unPorcentaje) {
+		patrimonio = patrimonio - patrimonio*(unPorcentaje/100)
+	}
+	
 }
 
 object casaLannister inherits Casa {

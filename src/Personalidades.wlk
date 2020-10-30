@@ -26,15 +26,18 @@ object asesinoPrecavido {
 	
 	method actuarContra(unaVictima) {
 		if (unaVictima.estoySuperCholito()) {
-			asesino.actuarContra(unaVictima)
+			asesino.actuarContra(unaVictima) 
+		}
 	}
 	
 }
 
 object disipado {
 	
+	var porcentajeADerrochar
+	
 	method actuarContra(unaVictima) {
-		
+		unaVictima.derrocharPorcentajePatrimonio(porcentajeADerrochar)
 	}
 	
 }

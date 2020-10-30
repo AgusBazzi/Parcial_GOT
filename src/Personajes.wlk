@@ -126,5 +126,9 @@ class Personaje {
 	method morir() {
 		estoyVivo = false
 	}
+	
+	method derrocharPorcentajePatrimonio(unPorcentaje) {
+		casa.perderPorcentajePatrimonio(unPorcentaje)
+	}
 
 }
