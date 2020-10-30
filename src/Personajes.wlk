@@ -100,5 +100,11 @@ class Personaje {
 			throw new Exception ( message = "La conspiracion no se puede realizar dado que el objetivo no es peligroso" )
 		}
 	}
+	
+	// ------ Punto C2 ------ //
+	
+	method esAliado(unPersonaje) {
+		return self.aliados().contains(unPersonaje)
+	}
 
 }
