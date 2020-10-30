@@ -39,4 +39,10 @@ class Personaje {
 	method agregarConyugue(otraPersona) {
 		conyugues.add(otraPersona)
 	}
+	
+	// ------ Punto A5 ------ //
+	
+	method patrimonio() {
+		return casa.patrimonioIndividual()
+	}
 }

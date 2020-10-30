@@ -1,6 +1,8 @@
 class Casa {
 	
 	var patrimonio
+	const miembros = #{}
+	const ciudad
 	
 	// ------ Punto A1 ------ //
 	
@@ -12,7 +14,15 @@ class Casa {
 		return patrimonio > 1000
 	}
 	
+	// ------ Punto A5 ------ //
 	
+	method patrimonioIndividual() {
+		return patrimonio / self.cantidadMiembros()
+	}
+	
+	method cantidadMiembros() {
+		return miembros.size()
+	}
 }
 
 object casaLannister inherits Casa {
