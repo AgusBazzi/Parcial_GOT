@@ -23,4 +23,20 @@ class Personaje {
 	method miCasaAdmiteCasamientoCon(otraPersona) {
 		return casa.admitoCasamientoEntre(self, otraPersona)
 	}
+	
+	// ------ Punto A3 ------ //
+	
+	method casarmeCon(otraPersona) {
+		if (self.puedoCasarmeCon(otraPersona)) {
+			self.agregarConyugue(otraPersona)
+			otraPersona.agregarConyugue(self)
+		}
+		else {
+			throw new Exception ( message = "No se puede concretar el casamiento" )
+		}
+	}
+	
+	method agregarConyugue(otraPersona) {
+		conyugues.add(otraPersona)
+	}
 }
