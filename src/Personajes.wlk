@@ -122,5 +122,9 @@ class Personaje {
 	method estoyVivo() {
 		return estoyVivo
 	}
+	
+	method morir() {
+		estoyVivo = false
+	}
 
 }

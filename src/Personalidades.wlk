@@ -17,7 +17,7 @@ object sutil {
 object asesino {
 	
 	method actuarContra(unaVictima) {
-		
+		unaVictima.morir()
 	}
 	
 }
@@ -25,7 +25,8 @@ object asesino {
 object asesinoPrecavido {
 	
 	method actuarContra(unaVictima) {
-		
+		if (unaVictima.estoySuperCholito()) {
+			asesino.actuarContra(unaVictima)
 	}
 	
 }
