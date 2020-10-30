@@ -1,4 +1,6 @@
 import Casas.*
+import Animales.*
+import Conspiraciones.*
 
 class Personaje {
 	
@@ -8,6 +10,7 @@ class Personaje {
 	const conyugues = #{}
 	const amigos = #{}
 	var estoyVivo
+	var conspiracion
 	
 	// ------ Punto A1 ------ //
 	
@@ -85,6 +88,17 @@ class Personaje {
 	
 	method tengoAliadoPeligroso() {
 		return self.aliados().any { aliado => aliado.soyPeligroso() }
+	}
+	
+	// ------ Punto C1 ------ //
+	
+	method crearConspiracionContra(unaVictima, unosComplotados) {
+		if (unaVictima.soyPeligroso()) {
+			conspiracion = new Conspiracion (victima = unaVictima, complotados = unosComplotados)
+		}
+		else {
+			throw new Exception ( message = "La conspiracion no se puede realizar dado que el objetivo no es peligroso" )
+		}
 	}
 
 }
