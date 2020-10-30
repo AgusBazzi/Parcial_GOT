@@ -57,6 +57,6 @@ class Personaje {
 	// ------ Punto B2 ------ //
 	
 	method aliados() {
-		return amigos + conyugues + casa.miembros()
+		return 2
 	}
 }

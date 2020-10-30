@@ -2,6 +2,7 @@ class Casa {
 	
 	var patrimonio
 	const miembros = #{}
+	const ciudad
 	
 	// ------ Punto A1 ------ //
 	
@@ -21,12 +22,6 @@ class Casa {
 	
 	method cantidadMiembros() {
 		return miembros.size()
-	}
-	
-	// ------ Punto B2 ------ //
-	
-	method miembros() {
-		return miembros
 	}
 }
 
